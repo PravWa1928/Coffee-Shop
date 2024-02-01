@@ -27,6 +27,12 @@ img {
   margin: 0 auto;
 }
 
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .btn {
   min-width: 200px;
   height: 50px;
@@ -61,6 +67,10 @@ img {
 
 .btn_full {
   width: 100%;
+}
+
+.btn_checkout {
+  width: 380px;
 }
 
 .header {
@@ -414,6 +424,9 @@ img {
   padding-top: 80px;
   border-top: 2px solid #14141d;
   padding-bottom: 60px;
+  background-color: #020204;
+  position: relative;
+  z-index: 2;
 }
 
 .footer_wrapper {
@@ -536,4 +549,130 @@ img {
 
 .product_description {
   margin: 30px;
+}
+
+.checkout {
+  flex: 1;
+  padding-top: 80px;
+}
+
+.checkout_wrapper {
+  display: flex;
+}
+
+.checkout_block {
+  flex: 1;
+  margin-right: 50px;
+}
+
+.checkout_total {
+  width: 380px;
+  position: relative;
+}
+
+.checkout_total:after {
+  content: " ";
+  position: absolute;
+  top: -160px;
+  left: -30px;
+  width: 50vw;
+  height: 100vh;
+  background-color: #14141d;
+}
+
+.checkout_table {
+  margin-bottom: 20px;
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #14141d;
+  z-index: 2;
+}
+
+.checkout_img {
+  height: 96px;
+  display: block;
+  margin-right: 25px;
+}
+
+.checkout_table-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.checkout_title {
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.checkout_size {
+  font-size: 14px;
+  font-weight: 700;
+  color: #818181;
+}
+
+.select {
+}
+
+.select select {
+  height: 25px;
+  background-color: transparent;
+  color: #fff;
+  min-width: 60px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  outline: 0;
+}
+
+.select option {
+  color: #000;
+}
+
+.checkout_actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.checkout_price {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.checkout_remove:hover {
+  text-decoration: none;
+}
+
+.checkout_total-row {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout_total-row .title {
+  font-size: 15px;
+}
+
+.checkout_total-row .count {
+  font-size: 15px;
+}
+
+.checkout_total-row.total {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.checkout_total-row.total .title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.checkout_total-row.total .count {
+  font-size: 16px;
+  font-weight: 700;
 }
